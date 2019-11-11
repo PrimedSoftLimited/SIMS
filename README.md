@@ -3,7 +3,7 @@ German Learning Site
 
 [Documentation](https://documenter.getpostman.com/view/6901755/SVtTyUS1)
 
-api host - (https://git.heroku.com/simsapi.git)
+    api host - (https://simsapi.herokuapp.com/)
 
 ### PUBLIC ROUTES
 - [x] Enroll
