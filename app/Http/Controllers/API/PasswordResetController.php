@@ -13,7 +13,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use App\Notifications\PasswordResetRequest;
 use App\Notifications\PasswordResetSuccess;
-use App\Http\Controllers\API\BaseController as BaseController;
 
 class PasswordResetController extends BaseController
 {
@@ -91,7 +90,7 @@ class PasswordResetController extends BaseController
             $passwordReset->delete();
             
             return response()->json(['message' => 'This password reset token has expired.'], 404);
-        }
+            }
 
         return response()->json($passwordReset, 201);
     }
@@ -114,7 +113,11 @@ class PasswordResetController extends BaseController
         ]);
 
         if($validator->fails()){
-            return $this->sendError('Validation Error.', $validator->errors());       
+            $response = [
+                'success' => false,
+                'Validation Error' => $validator->errors(),
+            ];
+            return response()->json($response, 401); 
         }
 
         $passwordReset = PasswordReset::where([
@@ -145,7 +148,6 @@ class PasswordResetController extends BaseController
             DB::commit();   
 
             $response['success'] =  True;
-            $response['details'] =  $user;
             $response['message'] = "Password Changed Successfully";
         
             return response()->json($response, 200);
