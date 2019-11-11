@@ -14,9 +14,9 @@ use Illuminate\Http\Request;
 */
 
 /******************** public routes ******************** start*/
-// used for users registration
+// enroll
 Route::post('/enroll', 'API\RegistrationController@enroll');
-// used for user login
+// login
 Route::post('/login', 'API\RegistrationController@login');
 
 // forgotten password routes
@@ -27,7 +27,7 @@ Route::group([
 ], function () {    
     // instantiate a forgotten possword mail
     Route::post('create', 'PasswordResetController@create');
-    // email link to reset password
+    // Receive email containing password reset link
     Route::get('find/{token}', 'PasswordResetController@find');
     // setting up new user password
     Route::post('reset', 'PasswordResetController@reset');
@@ -44,12 +44,13 @@ Route::group([
     Route::get('/user', 'UserController@show');
     // logout route... this route destroys token generated at login
     Route::get('/logout', 'UserController@logout');    
-    // lets a user update default password... this is supposed to for one time usage
+    // update default password
     Route::post('/password', 'UserController@updatePassword');
-    // lets a user upload profile picture
+    // upload profile picture
     Route::post('/upload', 'ImageUploadController@uploadImage');
-    // user can updated profile information
+    // updated profile information
     Route::put('update', 'UpdateProfileController@update');
+    ### PRIVATE ROUTES
     
 });
 /************ private or authenticated routes ************ end*/
