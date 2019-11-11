@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
         JD\Cloudder\CloudderServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
 
         /*
          * Package Service Providers...
