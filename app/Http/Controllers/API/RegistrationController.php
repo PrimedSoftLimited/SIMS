@@ -50,7 +50,7 @@ class RegistrationController extends BaseController
                 'success' => false,
                 'Validation Error' => $validator->errors(),
             ];
-            return response()->json($response, 402); 
+            return response()->json($response, 422); 
         }
 
         try {
@@ -102,7 +102,7 @@ class RegistrationController extends BaseController
                 'success' => false,
                 'Validation Error' => $validator->errors(),
             ];
-            return response()->json($response, 401); 
+            return response()->json($response, 422); 
         }
 
         $credentials = request(['user_id', 'password']);
