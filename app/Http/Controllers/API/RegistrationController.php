@@ -22,21 +22,21 @@ class RegistrationController extends BaseController
     public function enroll(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'dob' => 'date|required',
-            'pob' => 'required|string',
-            'lga' => 'required|string',
+            'dob' => 'date',
+            'pob' => 'string',
+            'lga' => 'string',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'email' => 'required|email|unique:users',
-            'phone' => 'required|phone',
-            'state' => 'required|string',
-            'class' => 'sometimes|string',
-            'level' => 'sometimes|string',
-            'gender' => 'required|string',
-            'address' => 'required|string|min:5',
-            'occupation' => 'required|string|min:5',
-            'nationality' => 'required|string|min:5',
-            'marital_status' => 'required|string',
+            'phone' => 'phone',
+            'state' => 'string',
+            'class' => 'string',
+            'level' => 'string',
+            'gender' => 'string',
+            'address' => 'string|min:5',
+            'occupation' => 'string|min:5',
+            'nationality' => 'string|min:5',
+            'marital_status' => 'string',
         ]);
 
         $user_id = mt_rand(1000, 9999);    
