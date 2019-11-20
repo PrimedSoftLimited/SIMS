@@ -22,18 +22,19 @@ class RegistrationController extends BaseController
     public function enroll(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'dob' => 'date|required',
-            'pob' => 'required|string',
-            'lga' => 'required|string',
+            'dob' => 'date',
+            'pob' => 'string',
+            'lga' => 'string',
             'first_name' => 'required|string',
             'last_name' => 'required|string',
             'email' => 'required|email|unique:users',
-            'phone' => 'required|phone',
-            'state' => 'required|string',
-            'level' => 'required|string',
-            'gender' => 'required|string',
-            'address' => 'required|string|min:5',
-            'occupation' => 'required|string|min:5',
+            'phone' => 'phone',
+            'state' => 'string',
+            'class' => 'string',
+            'level' => 'string',
+            'gender' => 'string',
+            'address' => 'string|min:5',
+            'occupation' => 'string|min:5',
             'nationality' => 'required|string|min:5',
             'marital_status' => 'required|string',
         ]);
@@ -49,7 +50,7 @@ class RegistrationController extends BaseController
                 'success' => false,
                 'Validation Error' => $validator->errors(),
             ];
-            return response()->json($response, 401); 
+            return response()->json($response, 422); 
         }
 
         try {
@@ -101,7 +102,7 @@ class RegistrationController extends BaseController
                 'success' => false,
                 'Validation Error' => $validator->errors(),
             ];
-            return response()->json($response, 401); 
+            return response()->json($response, 422); 
         }
 
         $credentials = request(['user_id', 'password']);
