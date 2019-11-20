@@ -49,7 +49,7 @@ class RegistrationController extends BaseController
                 'success' => false,
                 'Validation Error' => $validator->errors(),
             ];
-            return response()->json($response, 401); 
+            return response()->json($response, 402); 
         }
 
         try {
