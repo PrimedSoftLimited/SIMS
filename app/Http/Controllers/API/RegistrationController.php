@@ -35,8 +35,8 @@ class RegistrationController extends BaseController
             'gender' => 'string',
             'address' => 'string|min:5',
             'occupation' => 'string|min:5',
-            'nationality' => 'string|min:5',
-            'marital_status' => 'string',
+            'nationality' => 'required|string|min:5',
+            'marital_status' => 'required|string',
         ]);
 
         $user_id = mt_rand(1000, 9999);    
