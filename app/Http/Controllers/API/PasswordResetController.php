@@ -10,8 +10,8 @@ use App\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Mail\PasswordResetRequest;
 use Illuminate\Support\Facades\Mail;
-use App\Notifications\PasswordResetRequest;
 use App\Notifications\PasswordResetSuccess;
 
 class PasswordResetController extends BaseController
@@ -29,7 +29,7 @@ class PasswordResetController extends BaseController
         ]);
 
         if($validator->fails()){
-            $response["Validation Error."] = $validator->errors();
+            $response["message"] = $validator->errors();
             return response()->json($response, 400);
         }
 
@@ -46,17 +46,19 @@ class PasswordResetController extends BaseController
                 ['email' => $user->email],
                 [
                     'email' => $user->email,
-                    'token' => str_random(60)
+                    'token' => str_random(6)
                  ]
             );
 
             if ($user && $passwordReset)
-            $user->notify(new PasswordResetRequest($passwordReset->token));
+
+            Mail::to($user->email)->send(new PasswordResetRequest($passwordReset->token));
+            // $user->notify(new PasswordResetRequest($passwordReset->token));
 
             DB::commit();   
 
             $response["success"] = True;
-            $response['message'] = "Password Reset Mail Has Been Sent to $user->email";
+            $response['message'] = "A password reset Mail has been sent to $user->email";
 
             return response()->json($response, 200);
 
@@ -115,7 +117,7 @@ class PasswordResetController extends BaseController
         if($validator->fails()){
             $response = [
                 'success' => false,
-                'Validation Error' => $validator->errors(),
+                'message' => $validator->errors(),
             ];
             return response()->json($response, 401); 
         }
