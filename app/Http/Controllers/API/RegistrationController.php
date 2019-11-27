@@ -48,7 +48,7 @@ class RegistrationController extends BaseController
         if($validator->fails()){
             $response = [
                 'success' => false,
-                'Validation Error' => $validator->errors(),
+                'message' => $validator->errors(),
             ];
             return response()->json($response, 422); 
         }
@@ -100,7 +100,7 @@ class RegistrationController extends BaseController
         if($validator->fails()){
             $response = [
                 'success' => false,
-                'Validation Error' => $validator->errors(),
+                'messsage' => $validator->errors(),
             ];
             return response()->json($response, 422); 
         }
