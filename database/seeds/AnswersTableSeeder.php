@@ -175,12 +175,12 @@ class AnswersTableSeeder extends Seeder
 
         //question8
         Answer::create([
-            'answer_name' => 'Welche Nummer hat Marisa?" <strong>Siene</strong>" Nummer ist 465230.',
+            'answer_name' => 'Welche Nummer hat Marisa? Siene Nummer ist 465230.',
             'correct_answer' => 'false',
             'question_id' => '8'
         ]);
         Answer::create([
-            'answer_name' => 'Welche Nummer hat Marisa?" <strong>Ihre</strong>" Nummer ist 465230.',
+            'answer_name' => 'Welche Nummer hat Marisa? Ihre Nummer ist 465230.',
             'correct_answer' => 'true',
             'question_id' => '8'
         ]);

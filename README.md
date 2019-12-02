@@ -9,7 +9,6 @@ API Hosting - (https://simsapi.herokuapp.com/)
 - [x] Enroll
 - [x] Login
 - [x] Instantiate forgotten password link
-- [x] Receive email containing password reset link
 - [x] set up new password
 
 ### PRIVATE ROUTES

@@ -27,21 +27,10 @@ Route::group([
 ], function () {    
     // instantiate a forgotten possword mail
     Route::post('create', 'PasswordResetController@create');
-    // Receive email containing password reset link
-    Route::get('find/{token}', 'PasswordResetController@find');
     // setting up new user password
     Route::post('reset', 'PasswordResetController@reset');
 });
 /******************** public routes ******************** end*/
-
-// view questions
-Route::get('questions', 'API\QuizController@index');
-
-// a user can attempt quiz
- Route::post('/{question_id}/answer', 'QuizController@create');
-
-// show single options of a poll and their vote count
-$router->get('/mark', 'MarkController@show');
 
 /************ private or authenticated routes ************ start*/
 Route::group([    
@@ -58,6 +47,16 @@ Route::group([
     Route::post('/upload', 'ImageUploadController@uploadImage');
     // updated profile information
     Route::put('update', 'UpdateProfileController@update');
+
+    // view all questions
+    Route::get('questions', 'QuizController@index');
+    // view one question
+    Route::get('question/{question_id}', 'QuizController@show');
+    // a user can attempt quiz
+    Route::post('{question_id}/answer', 'QuizController@create');
+
+    // show single options of a poll and their vote count
+    // $router->get('/mark', 'MarkController@show'); 
 });
 /************ private or authenticated routes ************ end*/
 

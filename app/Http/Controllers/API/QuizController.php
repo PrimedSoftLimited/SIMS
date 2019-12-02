@@ -25,6 +25,21 @@ class QuizController extends Controller
         
         return response()->json($question, 200);
     }
+
+       /**
+     * View one question and options.
+     *
+     * @return Response
+     */
+    public function show($question_id)
+    {
+        $question = Question::where('id', $question_id)    
+                    ->with('instructions')
+                    ->with('answers')
+                    ->get();
+        
+        return response()->json($question, 200);
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -32,7 +47,7 @@ class QuizController extends Controller
      */
     public function create(Request $request, $question_id)
     {
-        $question = Question::find($question_id);
+        $question = Question::where('question_id', $question->id)->exists();
 
         $this->validateAnswer($request);
         if($question){
@@ -40,6 +55,7 @@ class QuizController extends Controller
                 $mark = new Mark;
                 $mark->user_id = Auth::user()->id;
                 $mark->answer_id = $request->input('answer_id');
+                $mark->question_id = $question->id;
                 $mark->save();
     
                 return response()->json('WELLDONE', 200);
