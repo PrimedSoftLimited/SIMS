@@ -34,6 +34,14 @@ Route::group([
 });
 /******************** public routes ******************** end*/
 
+// view questions
+Route::get('questions', 'API\QuizController@index');
+
+// a user can attempt quiz
+ Route::post('/{question_id}/answer', 'QuizController@create');
+
+// show single options of a poll and their vote count
+$router->get('/mark', 'MarkController@show');
 
 /************ private or authenticated routes ************ start*/
 Route::group([    
@@ -50,8 +58,6 @@ Route::group([
     Route::post('/upload', 'ImageUploadController@uploadImage');
     // updated profile information
     Route::put('update', 'UpdateProfileController@update');
-    ### PRIVATE ROUTES
-    
 });
 /************ private or authenticated routes ************ end*/
 
