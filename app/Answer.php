@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class answer extends Model
+class Answer extends Model
 {
         /**
      * The database table used by the model.
@@ -14,7 +14,6 @@ class answer extends Model
     protected $table = 'answers';
     protected $fillable=[
         'answer_name',
-        'correct_answer',
         'question_id',
     ];
 
@@ -33,6 +32,10 @@ class answer extends Model
 
     public function questions(){
         return $this->belongsTo('App\Question');
+    }
+
+    public function instructions(){
+        return $this->belongsTo('App\Instruction');
     }
 
 }

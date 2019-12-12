@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMarksTable extends Migration
+class CreateAnswersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,17 @@ class CreateMarksTable extends Migration
      */
     public function up()
     {
-        Schema::create('marks', function (Blueprint $table) {
+        Schema::create('answers', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('answer_id');
+            $table->string('answer_name')->nullable();
             $table->unsignedInteger('question_id');
-            $table->unsignedInteger('user_id');
+            $table->unsignedInteger('instruction_id');
+            $table->unsignedInteger('option_id');
             $table->timestamps();
-
-            $table->foreign('answer_id')->references('id')->on('answers')->onDelete('cascade');
+            
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('instruction_id')->references('id')->on('instructions')->onDelete('cascade');
+            $table->foreign('option_id')->references('id')->on('options')->onDelete('cascade');
         });
     }
 
@@ -33,6 +34,6 @@ class CreateMarksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('marks');
+        Schema::dropIfExists('answers');
     }
 }
