@@ -20,7 +20,6 @@ class ExamsController extends Controller
     public function index()
     {
         $exam = Exam::get();
-        
         return response()->json($exam, 200);
     }
 
@@ -31,14 +30,15 @@ class ExamsController extends Controller
      */
     public function show($exam_id)
     {
-        $exam = Exam::where('id', $exam_id)    
-                    ->with('questions')
-                    ->with(['instructions' => function($query){
-                        $query->with('options');
-                    }])
+        $exam = Exam::where('id', $exam_id)
+                    ->with(['questions' => function($query1){
+                        $query1->with(['instructions' => function($query2){
+                            $query2->with('options');
+                        }]);
+                    }])    
                     ->get();
         
-        return response()->json($question, 200);
+        return response()->json($exam, 200);
     }
     /**
      * Store a newly created resource in storage.

@@ -54,7 +54,7 @@ Route::group([
     Route::get('exam/{exam_id}', 'ExamsController@show');
  
     // a user can attempt quiz
-    Route::post('{question_id}/answer', 'QuizController@create');
+    // Route::post('{question_id}/answer', 'QuizController@create');
 
     // show single options of a poll and their vote count
     // $router->get('/mark', 'MarkController@show'); 
