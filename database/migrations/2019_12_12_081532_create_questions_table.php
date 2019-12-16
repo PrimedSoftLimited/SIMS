@@ -17,7 +17,12 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->longText('question_name')->nullable();
             $table->string('question_image')->nullable();
+            $table->string('question_audio')->nullable();
+            $table->string('type')->nullable();
+            $table->unsignedInteger('exam_id');
             $table->timestamps();
+            
+            $table->foreign('exam_id')->references('id')->on('exams')->onDelete('cascade');
         });
     }
 
