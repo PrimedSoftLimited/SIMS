@@ -48,10 +48,11 @@ Route::group([
     // updated profile information
     Route::put('update', 'UpdateProfileController@update');
 
-    // view all questions
-    Route::get('questions', 'QuizController@index');
-    // view one question
-    Route::get('question/{question_id}', 'QuizController@show');
+    // view all exams
+    Route::get('exam', 'ExamsController@index');
+    // view one exama and its quesitons
+    Route::get('exam/{exam_id}', 'ExamsController@show');
+ 
     // a user can attempt quiz
     Route::post('{question_id}/answer', 'QuizController@create');
 
