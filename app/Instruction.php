@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Instruction extends Model
 {
-            /**
+     /**
      * The database table used by the model.
      *
      * @var string
@@ -26,4 +26,7 @@ class Instruction extends Model
         return $this->belongsTo('App\Question');
     }
 
+    public function options(){
+        return $this->hasMany('App\Option');
+    }
 }

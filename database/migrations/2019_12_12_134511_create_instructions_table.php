@@ -14,9 +14,9 @@ class CreateInstructionsTable extends Migration
     public function up()
     {
         Schema::create('instructions', function (Blueprint $table) {
-            $table->bigIncrements('instrunction_id');
-            $table->string('instruction_name')->nullable()->default("NULL");
-            $table->string('instruction_audio')->nullable()->default("NULL");
+            $table->increments('id');
+            $table->longText('instruction_name')->nullable()->default(null);
+            $table->string('instruction_audio')->nullable()->default(null);
             $table->unsignedInteger('question_id');
             $table->timestamps();
 

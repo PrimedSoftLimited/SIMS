@@ -14,626 +14,438 @@ class AnswersTableSeeder extends Seeder
     {
         //question1
         Answer::create([
-            'answer_name' => 'Guten Morgen',
-            'correct_answer' => 'false',
-            'question_id' => '1'
-        ]);
-        Answer::create([
             'answer_name' => 'Guten Abend',
-            'correct_answer' => 'true',
-            'question_id' => '1'
+            'question_id' => '1',
+            'instruction_id' => '1',
+            'option_id' => '2',
         ]);
-        Answer::create([
-            'answer_name' => 'Gute Nacht',
-            'correct_answer' => 'false',
-            'question_id' => '1'
-        ]);
-      
+
+
         //question2
         Answer::create([
-            'answer_name' => 'Name ist(...) Mein',
-            'correct_answer' => 'false',
-            'question_id' => '2'
-        ]);
-        Answer::create([
-            'answer_name' => 'ist(...) Mein Name',
-            'correct_answer' => 'false',
-            'question_id' => '2'
-        ]);
-        Answer::create([
             'answer_name' => 'Mein Name (ist...)',
-            'correct_answer' => 'true',
-            'question_id' => '2'
+            'question_id' => '2',
+            'instruction_id' => '2',
+            'option_id' => '4',
         ]);
 
         //question3
         Answer::create([
-            'answer_name' => '204',
-            'correct_answer' => 'false',
-            'question_id' => '3'
-        ]);
-        Answer::create([
             'answer_name' => '224',
-            'correct_answer' => 'true',
-            'question_id' => '3'
-        ]);
-        Answer::create([
-            'answer_name' => '240',
-            'correct_answer' => 'false',
-            'question_id' => '3'
-        ]);
-        Answer::create([
-            'answer_name' => '242',
-            'correct_answer' => 'false',
-            'question_id' => '3'
+            'question_id' => '3',
+            'instruction_id' => '3',
+            'option_id' => '6',
         ]);
 
         //question4
         Answer::create([
             'answer_name' => '06:30 - 09:30 Uhr',
-            'correct_answer' => 'true',
-            'question_id' => '4'
-        ]);
-        Answer::create([
-            'answer_name' => '07:30 - 09:30 Uhr',
-            'correct_answer' => 'false',
-            'question_id' => '4'
-        ]);
-        Answer::create([
-            'answer_name' => '07:30 - 10:30',
-            'correct_answer' => 'false',
-            'question_id' => '4'
+            'question_id' => '4',
+            'instruction_id' => '4',
+            'option_id' => '9',
         ]);
 
         //question5
         Answer::create([
             'answer_name' => 'Woher kommen Sie?',
-            'correct_answer' => 'true',
-            'question_id' => '5'
+            'question_id' => '5',
+            'instruction_id' => '5',
+            'option_id' => '12',
         ]);
         Answer::create([
-            'answer_name' => 'Wo kommen Sie?',
-            'correct_answer' => 'false',
-            'question_id' => '5'
+            'answer_name' => 'Wo wohnen Sie?',
+            'question_id' => '5',
+            'instruction_id' => '5',
+            'option_id' => '13',
         ]);
         Answer::create([
-            'answer_name' => 'Welche kommen Sie?',
-            'correct_answer' => 'false',
-            'question_id' => '5'
+            'answer_name' => 'Was studieren Sie?',
+            'question_id' => '5',
+            'instruction_id' => '5',
+            'option_id' => '14',
         ]);
         Answer::create([
-            'answer_name' => 'Was kommen Sie?',
-            'correct_answer' => 'false',
-            'question_id' => '5'
+            'answer_name' => 'Sprachen sprechen Sie?',
+            'question_id' => '5',
+            'instruction_id' => '5',
+            'option_id' => '15',  
         ]);
 
         //question6
         Answer::create([
-            'answer_name' => 'Danke schön.',
-            'correct_answer' => 'false',
-            'question_id' => '6'
-        ]);
-        Answer::create([
             'answer_name' => '"Ja, gerne"',
-            'correct_answer' => 'true',
-            'question_id' => '6'
-        ]);
-        Answer::create([
-            'answer_name' => 'Sehr gut',
-            'correct_answer' => 'false',
-            'question_id' => '6'
+            'question_id' => '6',
+            'instruction_id' => '6',
+            'option_id' => '17',
         ]);
         
         Answer::create([
             'answer_name' => 'Danke schön.',
-            'correct_answer' => 'true',
-            'question_id' => '6'
+            'question_id' => '6',
+            'instruction_id' => '7',
+            'option_id' => '19',
         ]);
-        Answer::create([
-            'answer_name' => '"Ja, gerne"',
-            'correct_answer' => 'false',
-            'question_id' => '6'
-        ]);
+        
         Answer::create([
             'answer_name' => 'Sehr gut',
-            'correct_answer' => 'false',
-            'question_id' => '6'
-        ]);
-
-        Answer::create([
-            'answer_name' => 'Danke schön.',
-            'correct_answer' => 'false',
-            'question_id' => '6'
-        ]);
-        Answer::create([
-            'answer_name' => '"Ja, gerne"',
-            'correct_answer' => 'false',
-            'question_id' => '6'
-        ]);
-        Answer::create([
-            'answer_name' => 'Sehr gut',
-            'correct_answer' => 'true',
-            'question_id' => '6'
+            'question_id' => '6',
+            'instruction_id' => '8',
+            'option_id' => '24',
         ]);
 
         //question7
         Answer::create([
-            'answer_name' => 'Die Telefonnummer lautet 843709',
-            'correct_answer' => 'true',
-            'question_id' => '7'
-        ]);
-        Answer::create([
-            'answer_name' => 'Die Telefonnummer lautet 834709',
-            'correct_answer' => 'false',
-            'question_id' => '7'
-        ]);
-        Answer::create([
-            'answer_name' => 'Die Telefonnummer lautet 843790',
-            'correct_answer' => 'false',
-            'question_id' => '7'
+            'answer_name' => '843709',
+            'question_id' => '7',
+            'instruction_id' => '9',
+            'option_id' => '25',
         ]);
 
         //question8
         Answer::create([
-            'answer_name' => 'Welche Nummer hat Marisa? Siene Nummer ist 465230.',
-            'correct_answer' => 'false',
-            'question_id' => '8'
+            'answer_name' => 'Ihre',
+            'question_id' => '8',
+            'instruction_id' => '10',
+            'option_id' => '26',
         ]);
+
         Answer::create([
-            'answer_name' => 'Welche Nummer hat Marisa? Ihre Nummer ist 465230.',
-            'correct_answer' => 'true',
-            'question_id' => '8'
+            'answer_name' => 'Seine',
+            'question_id' => '8',
+            'instruction_id' => '10',
+            'option_id' => '29',
         ]);
-   
+
+        Answer::create([
+            'answer_name' => 'Ihre',
+            'question_id' => '8',
+            'instruction_id' => '10',
+            'option_id' => '30',
+        ]);
+
         //question9
         Answer::create([
-            'answer_name' => 'Ja',
-            'correct_answer' => 'false',
-            'question_id' => '9'
-        ]);
-        Answer::create([
             'answer_name' => 'Nein',
-            'correct_answer' => 'true',
-            'question_id' => '9'
+            'question_id' => '9',
+            'instruction_id' => '11',
+            'option_id' => '33',
         ]);
 
         //question10
         Answer::create([
             'answer_name' => 'Ja',
-            'correct_answer' => 'true',
-            'question_id' => '10'
-        ]);
-        Answer::create([
-            'answer_name' => 'Nein',
-            'correct_answer' => 'false',
-            'question_id' => '10'
+            'question_id' => '10',
+            'instruction_id' => '12',
+            'option_id' => '34',
         ]);
 
         //question11
         Answer::create([
-            'answer_name' => 'Maria komme aus Brasilien',
-            'correct_answer' => 'false',
-            'question_id' => '11'
+            'answer_name' => 'kommt',
+            'question_id' => '11',
+            'instruction_id' => '13',
+            'option_id' => '38',
         ]);
         Answer::create([
-            'answer_name' => 'Maria kommen aus Brasilien',
-            'correct_answer' => 'false',
-            'question_id' => '11'
+            'answer_name' => 'kann',
+            'question_id' => '11',
+            'instruction_id' => '13',
+            'option_id' => '39',
         ]);
         Answer::create([
-            'answer_name' => 'Maria kommt aus Brasilien',
-            'correct_answer' => 'true',
-            'question_id' => '11'
+            'answer_name' => 'spricht',
+            'question_id' => '11',
+            'instruction_id' => '13',
+            'option_id' => '44',
         ]);
 
         //question12
         Answer::create([
-            'answer_name' => 'Entschuldigung, was bedeutet ...?',
-            'correct_answer' => 'false',
-            'question_id' => '12'
+            'answer_name' => 'Entschuldigung, noch einmal bitte.',
+            'question_id' => '12',
+            'instruction_id' => '14',
+            'option_id' => '47',
         ]);
         Answer::create([
             'answer_name' => 'Können Sie das aufschreiben bitte?',
-            'correct_answer' => 'false',
-            'question_id' => '12'
+            'question_id' => '12',
+            'instruction_id' => '15',
+            'option_id' => '49',
         ]);
-        Answer::create([
-            'answer_name' => 'Entschuldigung, noch einmal bitte.',
-            'correct_answer' => 'true',
-            'question_id' => '12'
-        ]);
-
-        //question 12 options 2
-        Answer::create([
-            'answer_name' => 'Stimmt das?',
-            'correct_answer' => 'false',
-            'question_id' => '12'
-        ]);
-        Answer::create([
-            'answer_name' => 'Können Sie das aufschreiben bitte?',
-            'correct_answer' => 'true',
-            'question_id' => '12'
-        ]);
-        Answer::create([
-            'answer_name' => 'Entschuldigung, noch einmal bitte.',
-            'correct_answer' => 'false',
-            'question_id' => '12'
-        ]);
-
-        
-        //question 12 options 3
         Answer::create([
             'answer_name' => 'Entschuldigung, was bedeutet ...?',
-            'correct_answer' => 'true',
-            'question_id' => '12'
-        ]);
-        Answer::create([
-            'answer_name' => 'Können Sie das aufschreiben bitte?',
-            'correct_answer' => 'false',
-            'question_id' => '12'
-        ]);
-        Answer::create([
-            'answer_name' => 'Entschuldigung, Können Sie das aufschreiben bitte?.',
-            'correct_answer' => 'false',
-            'question_id' => '12'
+            'question_id' => '12',
+            'instruction_id' => '16',
+            'option_id' => '51',
         ]);
 
         //question13
         Answer::create([
             'answer_name' => 'www.urlaub-in-de.de',
-            'correct_answer' => 'true',
-            'question_id' => '13'
-        ]);
-        Answer::create([
-            'answer_name' => 'www.reisehlife.com',
-            'correct_answer' => 'false',
-            'question_id' => '13'
+            'question_id' => '13',
+            'instruction_id' => '17',
+            'option_id' => '54',
         ]);
 
         //question14
         Answer::create([
-            'answer_name' => 'Ich hätte gerne einTomatensuppe',
-            'correct_answer' => 'false',
-            'question_id' => '14'
+            'answer_name' => 'eine',
+            'question_id' => '14',
+            'instruction_id' => '18',
+            'option_id' => '56',
         ]);
+
         Answer::create([
-            'answer_name' => 'Ich hätte gerne eineTomatensuppe',
-            'correct_answer' => 'true',
-            'question_id' => '14'
+            'answer_name' => 'ein',
+            'question_id' => '14',
+            'instruction_id' => '18',
+            'option_id' => '58',
         ]);
+        
         Answer::create([
-            'answer_name' => 'Ich hätte gerne einenTomatensuppe',
-            'correct_answer' => 'false',
-            'question_id' => '14'
+            'answer_name' => 'einen',
+            'question_id' => '14',
+            'instruction_id' => '18',
+            'option_id' => '63',
         ]);
 
         //question15
         Answer::create([
-            'answer_name' => 'Gleis 6',
-            'correct_answer' => 'false',
-            'question_id' => '15'
-        ]);
-        Answer::create([
-            'answer_name' => 'Gleis 10',
-            'correct_answer' => 'false',
-            'question_id' => '15'
-        ]);
-        Answer::create([
             'answer_name' => 'Gleis 16',
-            'correct_answer' => 'true',
-            'question_id' => '15'
+            'question_id' => '15',
+            'instruction_id' => '19',
+            'option_id' => '66',
         ]);
 
-        //question16 option b
+        //question16 
         Answer::create([
-            'answer_name' => 'Hier können Sie über die Straße gehen.',
-            'correct_answer' => 'true',
-            'question_id' => '16'
+            'answer_name' => 'durfen.',
+            'question_id' => '16',
+            'instruction_id' => '20',
+            'option_id' => '67',        
+            ]);
+        Answer::create([
+            'answer_name' => 'können.',
+            'question_id' => '16',
+            'instruction_id' => '20',
+            'option_id' => '69',
         ]);
         Answer::create([
-            'answer_name' => 'Hier müssen Sie über die Straße gehen.',
-            'correct_answer' => 'false',
-            'question_id' => '16'
+            'answer_name' => 'müssen',
+            'question_id' => '16',
+            'instruction_id' => '20',
+            'option_id' => '72',
         ]);
 
-        //question17 -a
+        //question17
         Answer::create([
-            'answer_name' => 'Hoffentlich',
-            'correct_answer' => 'false',
-            'question_id' => '17'
+            'answer_name' => 'Schade',
+            'question_id' => '17',
+            'instruction_id' => '21',
+            'option_id' => '75',
         ]);
         Answer::create([
             'answer_name' => 'Ja, gerne',
-            'correct_answer' => 'false',
-            'question_id' => '17'
+            'question_id' => '17',
+            'instruction_id' => '22',
+            'option_id' => '77',
         ]);
-        Answer::create([
-            'answer_name' => 'Schade',
-            'correct_answer' => 'true',
-            'question_id' => '17'
-        ]);
-        
-        //question17 -b
         Answer::create([
             'answer_name' => 'Hoffentlich',
-            'correct_answer' => 'false',
-            'question_id' => '17'
-        ]);
-        Answer::create([
-            'answer_name' => 'Ja, gerne',
-            'correct_answer' => 'true',
-            'question_id' => '17'
-        ]);
-        Answer::create([
-            'answer_name' => 'Schade',
-            'correct_answer' => 'false',
-            'question_id' => '17'
-        ]);        
-        
-        //question17 -c
-        Answer::create([
-            'answer_name' => 'Hoffentlich',
-            'correct_answer' => 'true',
-            'question_id' => '17'
-        ]);
-        Answer::create([
-            'answer_name' => 'Ja, gerne',
-            'correct_answer' => 'false',
-            'question_id' => '17'
-        ]);
-        Answer::create([
-            'answer_name' => 'Schade',
-            'correct_answer' => 'false',
-            'question_id' => '17'
+            'question_id' => '18',
+            'instruction_id' => '23',
+            'option_id' => '79',
         ]);
 
         //question18
         Answer::create([
-            'answer_name' => 'Geh zum Informationsschalter.',
-            'correct_answer' => 'false',
-            'question_id' => '18'
-        ]);
-        Answer::create([
             'answer_name' => 'Geh zum Flugsteig.',
-            'correct_answer' => 'true',
-            'question_id' => '18'
-        ]);
-        Answer::create([
-            'answer_name' => 'Warte auf weitere Informationen.',
-            'correct_answer' => 'false',
-            'question_id' => '18'
+            'question_id' => '18',
+            'instruction_id' => '24',
+            'option_id' => '83',
         ]);
 
         //question19
         Answer::create([
-            'answer_name' => 'Können Sie mich helfen?',
-            'correct_answer' => 'false',
-            'question_id' => '19'
+            'answer_name' => 'mir',
+            'question_id' => '19',
+            'instruction_id' => '25',
+            'option_id' => '86',
         ]);
         Answer::create([
-            'answer_name' => 'Können Sie mir helfen?',
-            'correct_answer' => 'false',
-            'question_id' => '19'
+            'answer_name' => 'mein',
+            'question_id' => '19',
+            'instruction_id' => '25',
+            'option_id' => '87',
         ]);
 
          //question20
         Answer::create([
             'answer_name' => '20',
-            'correct_answer' => 'true',
-            'question_id' => '20'
+            'question_id' => '20',
+            'instruction_id' => '26',
+            'option_id' => '90',
         ]);
+
         Answer::create([
-            'answer_name' => '10',
-            'correct_answer' => 'false',
-            'question_id' => '20'
+            'answer_name' => '453',
+            'question_id' => '20',
+            'instruction_id' => '26',
+            'option_id' => '91',
         ]);
 
         //question21
         Answer::create([
-            'answer_name' => 'He wants to invite you.',
-            'correct_answer' => 'false',
-            'question_id' => '21'
-        ]);
-        Answer::create([
-            'answer_name' => 'He wants to thank you.',
-            'correct_answer' => 'false',
-            'question_id' => '21'
-        ]);
-        Answer::create([
             'answer_name' => 'He wants to send you greetings.',
-            'correct_answer' => 'true',
-            'question_id' => '21'
+            'question_id' => '21',
+            'instruction_id' => '27',
+            'option_id' => '94',
         ]);
 
         //question22
         Answer::create([
-            'answer_name' => 'Halo Julia.',
-            'correct_answer' => 'false',
-            'question_id' => '22'
-        ]);
-        Answer::create([
             'answer_name' => 'Halo, ist Julia da?',
-            'correct_answer' => 'true',
-            'question_id' => '22'
-        ]);
-        Answer::create([
-            'answer_name' => 'Moment bitte.',
-            'correct_answer' => 'false',
-            'question_id' => '22'
+            'question_id' => '22',
+            'instruction_id' => '28',
+            'option_id' => '96',
         ]);
 
         //question23
         Answer::create([
-            'answer_name' => 'Ich hätte gerne auf dem Tomatensuppe',
-            'correct_answer' => 'false',
-            'question_id' => '23'
+            'answer_name' => 'mit',
+            'question_id' => '23',
+            'instruction_id' => '29',
+            'option_id' => '99',
         ]);
         Answer::create([
-            'answer_name' => 'Ich hätte gerne mit der Tomatensuppe',
-            'correct_answer' => 'true',
-            'question_id' => '23'
+            'answer_name' => 'der',
+            'question_id' => '23',
+            'instruction_id' => '29',
+            'option_id' => '103',
         ]);
         Answer::create([
-            'answer_name' => 'Ich hätte gerne bei die Tomatensuppe',
-            'correct_answer' => 'false',
-            'question_id' => '23'
-        ]);
-
-        //question24 -a
-        Answer::create([
-            'answer_name' => 'Bitte buchstabieren Sie das.',
-            'correct_answer' => 'false',
-            'question_id' => '24'
+            'answer_name' => 'mit',
+            'question_id' => '23',
+            'instruction_id' => '29',
+            'option_id' => '104',
         ]);
         Answer::create([
-            'answer_name' => 'Wie sagt man das auf Deutsch?',
-            'correct_answer' => 'true',
-            'question_id' => '24'
-        ]);
-        Answer::create([
-            'answer_name' => 'Stimmd das?',
-            'correct_answer' => 'false',
-            'question_id' => '24'
+            'answer_name' => 'dem',
+            'question_id' => '23',
+            'instruction_id' => '29',
+            'option_id' => '109',
         ]);
 
-        //question24 -b
-        Answer::create([
-            'answer_name' => 'Bitte buchstabieren Sie das.',
-            'correct_answer' => 'false',
-            'question_id' => '24'
-        ]);
+        //question24
         Answer::create([
             'answer_name' => 'Wie sagt man das auf Deutsch?',
-            'correct_answer' => 'false',
-            'question_id' => '24'
+            'question_id' => '24',
+            'instruction_id' => '30',
+            'option_id' => '111',
         ]);
         Answer::create([
             'answer_name' => 'Ist das richtig?',
-            'correct_answer' => 'true',
-            'question_id' => '24'
+            'question_id' => '24',
+            'instruction_id' => '31',
+            'option_id' => '115',
         ]);
 
-        //question24 -c
         Answer::create([
             'answer_name' => 'Bitte buchstabieren Sie das.',
-            'correct_answer' => 'true',
-            'question_id' => '24'
-        ]);
-        Answer::create([
-            'answer_name' => 'Wie sagt man das auf Deutsch?',
-            'correct_answer' => 'false',
-            'question_id' => '24'
-        ]);
-        Answer::create([
-            'answer_name' => 'Ist das richtig?',
-            'correct_answer' => 'false',
-            'question_id' => '24'
+            'question_id' => '24',
+            'instruction_id' => '32',
+            'option_id' => '116',
         ]);
         
         //question25
         Answer::create([
             'answer_name' => 'Gebäude A',
-            'correct_answer' => 'true',
-            'question_id' => '25'
-        ]);
-        Answer::create([
-            'answer_name' => 'Gebäude B"',
-            'correct_answer' => 'false',
-            'question_id' => '25'
-        ]);
-        Answer::create([
-            'answer_name' => 'Gebäude C',
-            'correct_answer' => 'false',
-            'question_id' => '25'
+            'question_id' => '25',
+            'instruction_id' => '33',
+            'option_id' => '119',
         ]);
 
         //question26
         Answer::create([
-            'answer_name' => 'Zug an Wann kommt dein?',
-            'correct_answer' => 'false',
-            'question_id' => '26'
-        ]);
-        Answer::create([
-            'answer_name' => 'Zug kommt dien Wann an?',
-            'correct_answer' => 'false',
-            'question_id' => '26'
-        ]);
-        Answer::create([
             'answer_name' => 'Wann kommt dien Zug an?',
-            'correct_answer' => 'true',
-            'question_id' => '26'
+            'question_id' => '26',
+            'instruction_id' => '34',
+            'option_id' => '122',
         ]);
 
         //question27
         Answer::create([
-            'answer_name' => 'Pullover: Etage',
-            'correct_answer' => 'true',
-            'question_id' => '27'
+            'answer_name' => '1. Etage',
+            'question_id' => '27',
+            'instruction_id' => '35',
+            'option_id' => '123',
         ]);
         Answer::create([
-            'answer_name' => 'Pullover: Erdgeschoss',
-            'correct_answer' => 'false',
-            'question_id' => '27'
+            'answer_name' => '2. Etage',
+            'question_id' => '27',
+            'instruction_id' => '35',
+            'option_id' => '125',
+        ]);
+        Answer::create([
+            'answer_name' => 'Erdgeschoss',
+            'question_id' => '27',
+            'instruction_id' => '35',
+            'option_id' => '127',
         ]);
 
         //question28
         Answer::create([
-            'answer_name' => 'beginner level',
-            'correct_answer' => 'true',
-            'question_id' => '28'
+            'answer_name' => 'Juni',
+            'question_id' => '28',
+            'instruction_id' => '36',
+            'option_id' => '130',
         ]);
         Answer::create([
-            'answer_name' => 'Intermidate',
-            'correct_answer' => 'false',
-            'question_id' => '28'
+            'answer_name' => '14 Tage',
+            'question_id' => '28',
+            'instruction_id' => '36',
+            'option_id' => '133',
         ]);
         Answer::create([
-            'answer_name' => 'final stage',
-            'correct_answer' => 'false',
-            'question_id' => '28'
+            'answer_name' => 'Anfangerstufe',
+            'question_id' => '28',
+            'instruction_id' => '36',
+            'option_id' => '135',
+        ]);
+        Answer::create([
+            'answer_name' => 'Gruppe mit 4-6 Personen',
+            'question_id' => '28',
+            'instruction_id' => '36',
+            'option_id' => '139',
+        ]);
+        Answer::create([
+            'answer_name' => 'Privat',
+            'question_id' => '28',
+            'instruction_id' => '36',
+            'option_id' => '142',
         ]);
 
-        //question29 -a
-        Answer::create([
-            'answer_name' => 'Ja',
-            'correct_answer' => 'false',
-            'question_id' => '29'
-        ]);
+        //question29
         Answer::create([
             'answer_name' => 'Nein',
-            'correct_answer' => 'true',
-            'question_id' => '29'
+            'question_id' => '29',
+            'instruction_id' => '37',
+            'option_id' => '144',
         ]);
 
-        //question29 -b
         Answer::create([
             'answer_name' => 'Ja',
-            'correct_answer' => 'true',
-            'question_id' => '29'
+            'question_id' => '29',
+            'instruction_id' => '38',
+            'option_id' => '145',
         ]);
-        Answer::create([
-            'answer_name' => 'Nein',
-            'correct_answer' => 'false',
-            'question_id' => '29'
-        ]);
-
 
         //question30
         Answer::create([
             'answer_name' => 'Herzlichen Glückwunsch!',
-            'correct_answer' => 'true',
-            'question_id' => '30'
+            'question_id' => '30',
+            'instruction_id' => '39',
+            'option_id' => '147',
         ]);
-        Answer::create([
-            'answer_name' => 'Alles Gute!',
-            'correct_answer' => 'false',
-            'question_id' => '30'
-        ]);
-        Answer::create([
-            'answer_name' => 'Ja, gern!',
-            'correct_answer' => 'false',
-            'question_id' => '30'
-        ]);
-
     }
 }
