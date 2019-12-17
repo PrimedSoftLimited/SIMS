@@ -86,12 +86,12 @@ class OptionsTableSeeder extends Seeder
         //question a1 - 6
         /**Option a1_i6 (16) */
         Option::create([
-            'option_name' => 'Danke schön',
+            'option_name' => 'Ja, gerne',
             'instruction_id' => '6'
         ]);
         /**Option a1_i6 (17) */
         Option::create([
-            'option_name' => 'Ja, gerne',
+            'option_name' => 'Danke schön',
             'instruction_id' => '6'
         ]);
         /**Option a1_i6 (18) */
@@ -275,7 +275,7 @@ class OptionsTableSeeder extends Seeder
         ]);
         /**Option a1_i17 (54) */
         Option::create([
-            'option_name' => 'www.urlaub-in-de.de?',
+            'option_name' => 'www.urlaub-in-de.de',
             'instruction_id' => '17'
         ]);
         /**Option a1_i17 (55) */
