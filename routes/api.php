@@ -50,14 +50,15 @@ Route::group([
 
     // view all exams
     Route::get('exam', 'ExamsController@index');
-    // view one exama and its quesitons
+    // view one exam and its quesitons
     Route::get('exam/{exam_id}', 'ExamsController@show');
- 
-    // view one exama and its quesitons
+    // view questions individually
     Route::get('exam/{examId}/{questionId}', 'ExamsController@viewOne');
- 
    // a user can attempt quiz
-    Route::post('{exam_id}/answer', 'ExamController@create');
+    Route::post('{examId}/{questionId}/{optionId}/answer', 'ExamsController@create');
+
+    //result
+    Route::get('{examId}/result', 'ResultController@index');
 
     // show single options of a poll and their vote count
     // $router->get('/mark', 'MarkController@show'); 

@@ -21,8 +21,13 @@ API Hosting - (https://simsapi.herokuapp.com/)
 ### EXAM ROUTES
 - [x] view all exams
 - [x] view one exam and its questions
+- [x] view one question
 - [x] attempt quizz
 
+###### There are three categories of exam, A1, A2 and B1 respectively; each exam has 30 questions.
+- Questions 1 - 30 = A1 exam
+- Questions 31 - 60 = A2 exam
+- Quesitons 61 - 90 = A3 exam
 
 #### The questions have to follwing types:
 * Boolean- Where one of the options is the correct one
