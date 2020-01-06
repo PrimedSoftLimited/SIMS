@@ -18,6 +18,7 @@ class CreateQuestionsTable extends Migration
             $table->longText('question_name')->nullable();
             $table->string('question_image')->nullable();
             $table->string('question_audio')->nullable();
+            $table->string('correct_option_count')->default(1)->nullable();
             $table->string('type')->nullable();
             $table->unsignedInteger('exam_id');
             $table->timestamps();
