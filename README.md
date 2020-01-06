@@ -28,13 +28,13 @@ API Hosting - (https://simsapi.herokuapp.com/)
 - [x] view one question
 - [x] attempt quizz
 
-#### There are three categories of exam, A1, A2 and B1 respectively; each exam has 30 questions.
+#### There are three categories of exam, A1, A2 and B1 respectively; each exam has 30 questions
 
 - Questions 1 - 30 = A1 exam
 - Questions 31 - 60 = A2 exam
 - Quesitons 61 - 90 = A3 exam
 
-#### The questions have to follwing types:
+#### The questions have to follwing types
 
 - Boolean- Where one of the options is the correct one
 - Arrange - where a set of text are to be arranged to make a sentence
@@ -56,4 +56,3 @@ For the options, where option text is null, is meant to be an input field
   - userId - user001
   - password - password
   - email - john@doe.com
-  
