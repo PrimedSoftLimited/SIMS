@@ -39,6 +39,10 @@ class CreateUsersTable extends Migration
             $table->string('occupation')->nullable();
             $table->string('nationality')->nullable();
             $table->string('marital_status')->nullable();
+
+            $table->string('paymentStatus')->default('null');
+            $table->string('transactionRef')->default('null');
+
             $table->rememberToken();
             $table->timestamps();
         });

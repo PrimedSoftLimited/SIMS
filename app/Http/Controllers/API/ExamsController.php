@@ -123,17 +123,17 @@ class ExamsController extends Controller
                     return response()->json($response, 201);
                 }
         }
-            // $mark = new Mark;
-            // $mark->answer = false;
-            // $mark->user_id = Auth::user()->id;
-            // $mark->exam_id = $examId;
-            // $mark->question_id = $questionId;
-            // $mark->option_id = $optionId;
-            // $mark->save();
+            $mark = new Mark;
+            $mark->answer = false;
+            $mark->user_id = Auth::user()->id;
+            $mark->exam_id = $examId;
+            $mark->question_id = $questionId;
+            $mark->option_id = $optionId;
+            $mark->save();
 
             $response = [
                 'success' => false,
-                'message' => "Try Again!",
+                'message' => "Incorrect Answer!",
             ]; 
             return response()->json($response, 401); 
     }
