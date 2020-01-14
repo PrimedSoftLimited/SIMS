@@ -30,6 +30,12 @@ API Hosting - (https://simsapi.herokuapp.com/)
 - [x] attempt quizz
 - [x] view result
 
+### ADMIN ROUTES
+
+- [x] view all registered users
+- [x] view all registered users who have made payments
+- [ ] send notification to all users
+
 #### There are three categories of exam, A1, A2 and B1 respectively; each exam has 30 questions
 
 - Questions 1 - 30 = A1 exam
