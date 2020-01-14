@@ -20,6 +20,7 @@ API Hosting - (https://simsapi.herokuapp.com/)
 - [x] upload profile picture
 - [x] update default password
 - [x] logout
+- [x] pay
 
 ### EXAM ROUTES
 
@@ -27,6 +28,7 @@ API Hosting - (https://simsapi.herokuapp.com/)
 - [x] view one exam and its questions
 - [x] view one question
 - [x] attempt quizz
+- [x] view result
 
 #### There are three categories of exam, A1, A2 and B1 respectively; each exam has 30 questions
 
@@ -44,6 +46,29 @@ API Hosting - (https://simsapi.herokuapp.com/)
 - multi_dropdown - a questions options are to be in dropdown
 
 For the options, where option text is null, is meant to be an input field
+
+#### For the payment route, you'll need the following
+
+The payment form will have the following informations
+
+```<input type="hidden" name="email" value="authenticatedUserEmai" />
+<input type="hidden" name="first_name" value="authenticatedUsersFirstName" />
+<input type="hidden" name="last_name" value="authenticatedUsersLastName" />
+<input type="hidden" name="amount" value="4500" />
+<input type="hidden" name="currency" value="NGN" />
+<input type="hidden" name="country" value="NG" />
+<input type="hidden" name="phonenumber" value="authenticatedUsersPhoneNumber" />
+<input type="hidden" name="description" value="SIMS Learning Fee" />
+```
+
+You can use the following MasterCard Details for Test
+
+```5531 8866 5214 2950
+cvv 564
+Expiry: 09/22
+Pin 3310
+otp 12345
+```
 
 ##### Defualt Users Account
 
